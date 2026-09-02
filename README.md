@@ -24,23 +24,30 @@ The analysis evaluates:
 
 ## 🎯 Key Finding
 
-The reported **11.03% month-on-month increase in absolute recovered amount from February to March 2026 is mathematically correct.**
+The reported **11.03% month-on-month increase in absolute recovered amount from February to March 2026 is mathematically correct**.
 
-However, the eligible population increased by **42.41%**, while recovery per eligible account **declined by 22.03%**.
+However, this increase should **not be interpreted as an 11% improvement in collection performance**.
+
+Over the same period:
+
+* Eligible accounts increased by **42.41%**
+* Recovery per eligible account **declined by 22.03%**
+* Recovered accounts increased by **11.32%**
+* Average recovery per recovered account declined by **0.26%**
 
 ### Performance Decomposition
 
 | Metric                                 | Feb → Mar 2026 | Interpretation                              |
 | -------------------------------------- | -------------: | ------------------------------------------- |
 | 💰 Absolute Recovered Amount           |    **+11.03%** | Headline increase is mathematically correct |
-| 👥 Eligible Population                 |    **+42.41%** | Significant expansion of the portfolio base |
+| 👥 Eligible Population                 |    **+42.41%** | Portfolio base expanded significantly       |
 | 🎯 Recovery per Eligible Account       |    **-22.03%** | Underlying recovery efficiency declined     |
-| ✅ Recovered Accounts                   |    **+11.32%** | Growth largely driven by account volume     |
+| ✅ Recovered Accounts                   |    **+11.32%** | Recovery growth was largely volume-driven   |
 | 💵 Avg. Recovery per Recovered Account |     **-0.26%** | Per-case recovery remained broadly stable   |
 
 ### 🔎 Conclusion
 
-The **11% headline is valid in absolute terms**, but the analysis indicates that the increase is **primarily volume-driven rather than an improvement in recovery efficiency**.
+The **11.03% headline is valid in absolute terms**, but it does **not represent an improvement in recovery efficiency**. The increase in recovered amount is primarily consistent with the substantially larger eligible population.
 
 ---
 
@@ -48,17 +55,17 @@ The **11% headline is valid in absolute terms**, but the analysis indicates that
 
 A detailed data quality and governance audit was performed before deriving business metrics.
 
-| Finding                              |            Result | Business Impact                              |
-| ------------------------------------ | ----------------: | -------------------------------------------- |
-| Duplicate payment rows               |           **500** | Required deduplication before analysis       |
-| Duplicate SUCCESS amount             |            **₹0** | No direct impact on recovered amount         |
-| PTP-payment matches                  |         **2,741** | Diagnostic attribution population            |
-| Valid PTP matches                    |   **189 (6.90%)** | Limited confidence in direct PTP attribution |
-| Agent IDs mapped to multiple vendors | **1,000 / 1,000** | Vendor-level attribution risk                |
-| Calls handled by multi-vendor agents |        **88,241** | Limits agent/vendor performance attribution  |
-| Golden Dataset unique accounts       |        **30,000** | Account-level analytical base                |
-| Duplicate account IDs                |             **0** | No duplicate accounts in Golden Dataset      |
-| Missing values                       |             **0** | Complete Golden Dataset                      |
+| Finding                              |            Result | Business Impact                             |
+| ------------------------------------ | ----------------: | ------------------------------------------- |
+| Duplicate payment rows               |           **500** | Required deduplication before analysis      |
+| Duplicate SUCCESS amount             |            **₹0** | Did not inflate successful recovery         |
+| PTP-payment matches                  |         **2,741** | Diagnostic attribution population           |
+| Valid PTP matches                    |   **189 (6.90%)** | Limited confidence in PTP attribution       |
+| Agent IDs mapped to multiple vendors | **1,000 / 1,000** | Vendor-level attribution risk               |
+| Calls handled by multi-vendor agents |        **88,241** | Limits agent/vendor performance attribution |
+| Golden Dataset accounts              |        **30,000** | Final account-level analytical base         |
+| Duplicate account IDs                |             **0** | No duplicate account identifiers            |
+| Missing values in Golden Dataset     |             **0** | Complete final analytical dataset           |
 
 ### Data Governance Controls
 
@@ -78,7 +85,7 @@ The analytical pipeline incorporates:
 
 ### Recommended Area: Call-Channel Optimization
 
-The analysis identifies **call-channel optimization** as the recommended area for the next **₹10 Cr investment**.
+The strongest immediate operational opportunity identified is **call-channel optimization**.
 
 Current performance:
 
@@ -91,15 +98,13 @@ A scenario was evaluated in which the call answer rate improves from **19.87% to
 
 This represents a **25.84% relative lift in answered calls**.
 
-However, the analysis does **not** treat this scenario as a guaranteed recovery forecast.
-
 ### Recommended Approach
 
-> **Deploy the ₹10 Cr through a controlled pilot rather than scaling the investment immediately.**
+> **Deploy the ₹10 Cr investment through a controlled pilot rather than treating it as a guaranteed recovery forecast.**
 
-The available observational data does not establish a sufficiently reliable causal estimate of incremental recovery.
+The available observational data does **not establish a reliable causal relationship between higher answer rates and incremental recovered amount**.
 
-A controlled experiment should therefore be used to measure:
+The pilot should measure:
 
 1. Incremental contactability
 2. Incremental payment conversion
@@ -169,6 +174,6 @@ The analysis challenges the interpretation of the reported **11% recovery improv
 
 While **absolute recovered amount increased by 11.03%**, the eligible portfolio expanded by **42.41%**, resulting in a **22.03% decline in recovery per eligible account**.
 
-**The key business insight is therefore not simply that recovery increased, but that the increase was achieved primarily through greater portfolio volume rather than improved recovery efficiency.**
+**The key business insight is therefore not simply that recovery increased, but that the increase was primarily volume-driven rather than an improvement in recovery efficiency.**
 
 This distinction is critical when evaluating collection strategy and deciding where to deploy the next **₹10 Cr**.
